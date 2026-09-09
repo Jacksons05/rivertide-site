@@ -13,3 +13,5 @@ Approved visual reference: uploaded file ddeed71b-4178-4a51-8dde-f1e980dc4b4e.pn
 Canonical project asset SHA-256: 307a6ef056a3141e1bd9f96e6d08bd135506311777622ab03553ea81f6dc31ee
 
 Project asset: dist/assets/rivertide-logo-blue.png
+
+The user subsequently requested no white background behind the logo. Keep the canonical PNG unchanged and use the website's `logo-remove-paper` SVG filter for transparent rendering. This removes the paper background without regenerating or recoloring the approved artwork. Do not use the rejected generated checkerboard variant.
