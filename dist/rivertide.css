@@ -12,3 +12,10 @@
 .purchase-answer.warning{padding:12px}
 .chart-legend i.buffer-line{height:0;background:none;border-top:1px dotted var(--navy)}
 .chart-legend i.scenario-line{height:0;background:none;border-top:2px dashed var(--navy)}
+
+/* Approved logo artwork, with its surrounding whitespace framed out. */
+.logo-frame{position:relative;display:block;width:230px;aspect-ratio:5.6;overflow:hidden;flex-shrink:0}
+.logo-frame img{position:absolute;width:116%;max-width:none;height:auto;left:50%;top:50%;transform:translate(-50%,-50%)}
+.product-name .logo-frame{width:155px}
+footer .logo-frame{width:185px}
+@media(max-width:720px){.masthead .logo-frame{width:170px}.product-name .logo-frame{width:125px}footer .logo-frame{width:170px}}
