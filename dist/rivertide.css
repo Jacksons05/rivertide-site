@@ -46,3 +46,18 @@ footer.contain{align-items:start;gap:40px;padding-block:40px}
 .footer-meta{max-width:340px}.photo-credits{font-size:12px;margin-top:20px;line-height:1.6}.photo-credits summary{cursor:pointer;text-decoration:underline;text-underline-offset:4px}.photo-credits a{text-decoration:underline}.photo-credits p{font-size:12px;margin-top:10px}
 @media(max-width:1050px){.masthead{gap:20px}.masthead nav{gap:20px}.hero-layout{grid-template-columns:1fr;gap:30px}.hero-side p{max-width:430px}.hero-scene{padding-top:185px}.hero-baseline{margin-top:40px}}
 @media(max-width:720px){.masthead{gap:14px;padding-block:16px}.masthead .brand{padding:8px}.masthead .logo-frame{width:150px}.masthead .button{font-size:12px;gap:10px;padding:12px}.masthead nav{display:flex;order:3;width:100%;justify-content:space-between;gap:12px;font-size:14px}.hero-scene{padding-top:190px;padding-bottom:36px;min-height:760px}.hero .eyeline>span:last-child{display:none}.hero-layout{margin-top:28px}.hero h1{font-size:clamp(40px,10.6vw,66px);letter-spacing:-1.5px}.hero-baseline{align-items:start;gap:20px;flex-direction:column}.hero-side p{font-size:16px}footer.contain{display:flex;flex-direction:column}.footer-main nav{gap:20px}}
+
+/* Viewport-sized chapters. min-height preserves overflow and enlarged text. */
+html{scroll-padding-top:0;scroll-snap-type:y proximity}
+main>section{min-height:100vh;min-height:100svh;margin-top:0;scroll-snap-align:start;scroll-margin-top:0}
+main>.product,main>.markets,main>.thinking{display:flex;flex-direction:column;justify-content:center;padding-block:clamp(32px,6svh,72px)}
+main>.hero-scene{padding-top:160px;padding-bottom:40px}
+main>.scenario{display:flex;align-items:center;padding-block:48px}
+main>.origin{align-content:center;padding-block:48px}
+main>.closing{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-block:48px}
+main>.closing .button{position:static;margin-top:32px}
+footer{scroll-snap-align:end}
+@media(min-width:1051px) and (min-height:650px){html{scroll-snap-type:y mandatory}}
+@media(max-width:1050px){main>.hero-scene{padding-top:180px}}
+@media(max-width:720px){main>.hero-scene{padding-top:190px}main>.product,main>.markets,main>.thinking,main>.scenario,main>.origin,main>.closing{padding-block:32px}}
+@media(prefers-reduced-motion:reduce){html{scroll-snap-type:none;scroll-behavior:auto}}
