@@ -49,9 +49,9 @@ footer.contain{align-items:start;gap:40px;padding-block:40px}
 
 /* Viewport-sized chapters. min-height preserves overflow and enlarged text. */
 html{scroll-padding-top:0;scroll-snap-type:y proximity}
-main>section{min-height:100vh;min-height:100svh;margin-top:0;scroll-snap-align:start;scroll-margin-top:0}
+main>section{min-height:100vh;min-height:100dvh;margin-top:0;scroll-snap-align:start;scroll-margin-top:0}
 main>.product,main>.markets,main>.thinking{display:flex;flex-direction:column;justify-content:center;padding-block:clamp(32px,6svh,72px)}
-main>.hero-scene{padding-top:160px;padding-bottom:40px}
+main>.hero-scene{min-height:100vh;min-height:100dvh;padding-top:160px;padding-bottom:40px}
 main>.scenario{display:flex;align-items:center;padding-block:48px}
 main>.origin{align-content:center;padding-block:48px}
 main>.closing{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-block:48px}
@@ -61,3 +61,32 @@ footer{scroll-snap-align:end}
 @media(max-width:1050px){main>.hero-scene{padding-top:180px}}
 @media(max-width:720px){main>.hero-scene{padding-top:190px}main>.product,main>.markets,main>.thinking,main>.scenario,main>.origin,main>.closing{padding-block:32px}}
 @media(prefers-reduced-motion:reduce){html{scroll-snap-type:none;scroll-behavior:auto}}
+
+/* Fit the product to laptop-height windows without scaling its text. */
+@media(min-width:901px){
+ main>.product{padding-block:24px}
+ .product-mast{padding-block:12px}
+ .screens{padding:20px}
+ .screen-title{margin-bottom:18px}
+ .stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .stats button{padding:12px 10px}
+ .stats button>strong{margin:9px 0;font-size:clamp(22px,2vw,28px)}
+ .chart-top{margin-top:18px;margin-bottom:8px}
+ .chart svg{height:clamp(140px,25dvh,240px);width:100%}
+ .question-grid{margin-top:18px}
+ .question-grid button{padding-top:16px}
+ .product-disclosure{padding-block:10px}
+}
+@media(min-width:901px) and (max-height:700px){
+ main>.product{padding-block:16px}
+ .screens{padding:16px 20px}
+ .stats button{padding-block:10px}
+ .chart-top{margin-top:12px}
+ .question-grid{margin-top:12px}
+ .question-grid button{padding-top:12px}
+}
+@media(min-width:901px) and (max-width:1050px){
+ .hero-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:30px}
+ .hero-side{margin-top:0}
+ main>.hero-scene{padding-top:140px}
+}
