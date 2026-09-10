@@ -140,3 +140,13 @@ footer{scroll-snap-align:end}
  .impact-number>span,.impact-ledger>div{font-size:18px}
  .low-warning{font-size:16px}.low-warning strong{font-size:34px}
 }
+
+/* Waitsfield: a bright photograph, with ink text instead of a dark scrim. */
+.hero-scene{overflow:clip;background:#fff;color:#000}
+.hero-photo{object-position:50% 52%;transform:scale(1.08)}
+.hero-scene::before{background:linear-gradient(90deg,rgba(255,255,255,.86) 0%,rgba(255,255,255,.68) 48%,rgba(255,255,255,.28) 100%)}
+.hero p,.hero .eyeline,.hero .mono{color:#000}
+.hero .hero-baseline,.hero .subtle-link{border-color:rgba(0,0,0,.4)}
+.hero .button,.hero .button:hover{background:#000;color:#fff;border-color:#000}
+.hero :focus-visible{outline-color:#000}
+@media(max-width:720px){.hero-scene::before{background:rgba(255,255,255,.76)}.hero-photo{object-position:55% 50%}}

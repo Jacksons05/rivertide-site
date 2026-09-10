@@ -1,17 +1,14 @@
 # Rivertide place photography
 
-These are licensed, real location photographs, not AI-generated images. Files are preserved without pixel edits; the website uses responsive object-fit framing.
+## Current hero — Waitsfield, Vermont
+- Great Eddy covered bridge, also called Village Bridge, spanning the Mad River at Bridge Street.
+- Photograph: View from downstream, Jet Lowe, 2004.
+- Collection: Historic American Engineering Record, Library of Congress, HAER VT-34-9.
+- Source: https://www.loc.gov/pictures/item/vt0133.photos.203891p
+- Wikimedia record: https://commons.wikimedia.org/wiki/File:VIEW_FROM_DOWNSTREAM._-_Village_Bridge,_Spanning_Mad_River_at_Bridge_Street,_Fayston,_Washington_County,_VT_HAER_VT-34-9.tif
+- Rights: Public domain in the United States, work of a National Park Service employee.
+- Asset: dist/assets/waitsfield-covered-bridge.jpg (3840px Wikimedia JPEG derivative).
+- Real archival black-and-white photograph, not an AI-generated image. Unedited downloaded pixels; responsive CSS framing excludes the scan border, and a white overlay improves text contrast.
+- Public attribution is retained in the footer. No endorsement is implied.
 
-## Martha’s Vineyard
-- Title: Morning at Vineyard Haven
-- Photographer: Quinn Dombrowski
-- Date: June 24, 2006
-- Source: https://commons.wikimedia.org/wiki/File:Morning_at_Vineyard_Haven.jpg
-- Original: https://upload.wikimedia.org/wikipedia/commons/1/1a/Morning_at_Vineyard_Haven.jpg
-- License: CC BY-SA 2.0, https://creativecommons.org/licenses/by-sa/2.0/
-- Asset: dist/assets/vineyard-harbor.jpg
-
-The harbor photograph is the sole editorial image, used behind the headline with a CSS dark overlay. The prior paired-photo section and winter photo have been removed. Retain the public footer photography credit and license link. Responsive crops and overlays are offered under CC BY-SA 2.0. Photography does not imply endorsement.
-
-## Design reference
-https://www.provenancexl.com/ was reviewed September 9, 2026. Its NYC scene demonstrates a prominent sense of place alongside a financial-software message. No Provenance imagery or code is included in Rivertide.
+This replaces the Vineyard Haven harbor hero at the user's request. Martha's Vineyard remains represented in the market comparison and origin content.
