@@ -150,3 +150,5 @@ footer{scroll-snap-align:end}
 .hero .button,.hero .button:hover{background:#fff;color:#000;border-color:#fff}
 .hero :focus-visible{outline-color:#fff}
 @media(max-width:720px){.hero-scene::before{background:linear-gradient(180deg,rgba(255,255,255,.8),rgba(255,255,255,.5) 140px,rgba(0,0,0,.55) 230px,rgba(0,0,0,.55))}.hero-photo{object-position:48% 50%}}
+
+.logo-frame{aspect-ratio:1760/270}.logo-frame img{position:static;width:100%;height:auto;transform:none;filter:none}

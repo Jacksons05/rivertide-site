@@ -1,17 +1,9 @@
-# Rivertide — approved logo
+# Rivertide shared logo
 
-Standing user decision, confirmed September 9, 2026.
+September 10, 2026: user explicitly requested a thinner two-wave icon aligned to the serif wordmark, and identical artwork on both properties. This supersedes the earlier requirement to keep the wave shape unchanged.
 
-Use the approved Rivertide logo in all future website, app, mockup, deck and branding drafts unless the user explicitly changes this decision.
+Use rivertide-logo-refined.svg on both properties. It preserves the original black River / muted-blue tide wordmark and combines it with the refined tapered wave. The file contains its own assets and transparent rendering filter. Keep the collapse toggle outside the logo link. Do not add a tilde or alternate text wordmark.
 
-The identity is the black two-wave mark, serif wordmark with “River” in black and “tide” in muted blue, on white. The name remains Rivertide: one word, capital R only. Blue is a restrained wordmark accent; the surrounding interface remains black and white unless instructed otherwise.
+Marketing asset: dist/assets/rivertide-logo-refined.svg. App asset: public/rivertide-logo-refined.svg. Both files must be byte-identical.
 
-Reuse the supplied artwork. Do not regenerate it, substitute a font approximation, recolor the wave mark, or revert to the earlier all-black logo. Preserve letterforms, spacing, aspect ratio and colors. Responsive scaling and framing out empty white margins are allowed; never clip artwork.
-
-Approved visual reference: uploaded file ddeed71b-4178-4a51-8dde-f1e980dc4b4e.png, Library ID libfile_25cb179ca1188191ab77338dd2992141. The existing production-ready logo asset used in the website draft is preserved with this instruction.
-
-Canonical project asset SHA-256: 307a6ef056a3141e1bd9f96e6d08bd135506311777622ab03553ea81f6dc31ee
-
-Project asset: dist/assets/rivertide-logo-blue.png
-
-The user subsequently requested no white background behind the logo. Keep the canonical PNG unchanged and use the website's `logo-remove-paper` SVG filter for transparent rendering. This removes the paper background without regenerating or recoloring the approved artwork. Do not use the rejected generated checkerboard variant.
+SHA-256: 9f121394ac2cd82ad8ee3ec8beb48f8f5c74e39bc1a6f6b241c0130d2772caff
