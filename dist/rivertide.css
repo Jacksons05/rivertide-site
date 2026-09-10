@@ -143,7 +143,7 @@ footer{scroll-snap-align:end}
 
 /* Waitsfield: a bright photograph, with ink text instead of a dark scrim. */
 .hero-scene{overflow:clip;background:#fff;color:#000}
-.hero-photo{object-position:50% 52%;transform:scale(1.08)}
+.hero-photo{object-position:50% 45%;transform:none}
 .hero-scene::before{background:linear-gradient(90deg,rgba(255,255,255,.86) 0%,rgba(255,255,255,.68) 48%,rgba(255,255,255,.28) 100%)}
 .hero p,.hero .eyeline,.hero .mono{color:#000}
 .hero .hero-baseline,.hero .subtle-link{border-color:rgba(0,0,0,.4)}

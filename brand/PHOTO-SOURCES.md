@@ -1,14 +1,11 @@
-# Rivertide place photography
+# Current Rivertide hero photograph
 
-## Current hero — Waitsfield, Vermont
-- Great Eddy covered bridge, also called Village Bridge, spanning the Mad River at Bridge Street.
-- Photograph: View from downstream, Jet Lowe, 2004.
-- Collection: Historic American Engineering Record, Library of Congress, HAER VT-34-9.
-- Source: https://www.loc.gov/pictures/item/vt0133.photos.203891p
-- Wikimedia record: https://commons.wikimedia.org/wiki/File:VIEW_FROM_DOWNSTREAM._-_Village_Bridge,_Spanning_Mad_River_at_Bridge_Street,_Fayston,_Washington_County,_VT_HAER_VT-34-9.tif
-- Rights: Public domain in the United States, work of a National Park Service employee.
-- Asset: dist/assets/waitsfield-covered-bridge.jpg (3840px Wikimedia JPEG derivative).
-- Real archival black-and-white photograph, not an AI-generated image. Unedited downloaded pixels; responsive CSS framing excludes the scan border, and a white overlay improves text contrast.
-- Public attribution is retained in the footer. No endorsement is implied.
+- Subject: Village / Great Eddy covered bridge, Waitsfield, Vermont, over the Mad River.
+- Photographer: Phil Haber Photography, credited on the source page.
+- Source: https://madrivervalley.com/vermontouring/
+- Image: https://www.madrivervalley.com/wp-content/uploads/2017/07/Village-Bridge-Waitsfield-Vermont.jpg
+- Local asset: dist/assets/waitsfield-bridge-color.jpg, 750 × 535.
+- Real full-color photograph. Downloaded pixels remain unedited; responsive CSS framing and light overlay only. No AI colorization or grayscale filter.
+- Public photographer and source credit appears in the footer. No endorsement or open-license status is asserted.
 
-This replaces the Vineyard Haven harbor hero at the user's request. Martha's Vineyard remains represented in the market comparison and origin content.
+Replaces the black-and-white Library of Congress photograph at the user's explicit request.
