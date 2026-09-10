@@ -1,11 +1,6 @@
-# Current Rivertide hero photograph
-
-- Subject: Village / Great Eddy covered bridge, Waitsfield, Vermont, over the Mad River.
-- Photographer: Phil Haber Photography, credited on the source page.
-- Source: https://madrivervalley.com/vermontouring/
-- Image: https://www.madrivervalley.com/wp-content/uploads/2017/07/Village-Bridge-Waitsfield-Vermont.jpg
-- Local asset: dist/assets/waitsfield-bridge-color.jpg, 750 × 535.
-- Real full-color photograph. Downloaded pixels remain unedited; responsive CSS framing and light overlay only. No AI colorization or grayscale filter.
-- Public photographer and source credit appears in the footer. No endorsement or open-license status is asserted.
-
-Replaces the black-and-white Library of Congress photograph at the user's explicit request.
+# Hero photograph
+Morning at Vineyard Haven by Quinn Dombrowski. Real full-color photograph reused from the previously approved harbor treatment.
+Source: https://commons.wikimedia.org/wiki/File:Morning_at_Vineyard_Haven.jpg
+License: https://creativecommons.org/licenses/by-sa/2.0/
+Asset: dist/assets/vineyard-harbor.jpg. Responsive crop and CSS contrast overlay; photograph adaptation under the same license. Attribution appears in the footer.
+Latest direction: a stronger warm harbor image, white overlay text, one full-bleed photo. Rest of the site palette and approved logo unchanged.

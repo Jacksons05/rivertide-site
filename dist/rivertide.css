@@ -141,12 +141,12 @@ footer{scroll-snap-align:end}
  .low-warning{font-size:16px}.low-warning strong{font-size:34px}
 }
 
-/* Waitsfield: a bright photograph, with ink text instead of a dark scrim. */
-.hero-scene{overflow:clip;background:#fff;color:#000}
-.hero-photo{object-position:50% 45%;transform:none}
-.hero-scene::before{background:linear-gradient(90deg,rgba(255,255,255,.86) 0%,rgba(255,255,255,.68) 48%,rgba(255,255,255,.28) 100%)}
-.hero p,.hero .eyeline,.hero .mono{color:#000}
-.hero .hero-baseline,.hero .subtle-link{border-color:rgba(0,0,0,.4)}
-.hero .button,.hero .button:hover{background:#000;color:#fff;border-color:#000}
-.hero :focus-visible{outline-color:#000}
-@media(max-width:720px){.hero-scene::before{background:rgba(255,255,255,.76)}.hero-photo{object-position:55% 50%}}
+/* One full-color harbor photograph. Local contrast protects white copy. */
+.hero-scene{overflow:clip;background:#000;color:#fff}
+.hero-photo{object-position:50% 52%;transform:none}
+.hero-scene::before{background:linear-gradient(180deg,rgba(255,255,255,.65) 0,rgba(255,255,255,.35) 110px,transparent 210px),linear-gradient(90deg,rgba(0,0,0,.58),rgba(0,0,0,.38))}
+.hero p,.hero .eyeline,.hero .mono{color:#fff}
+.hero .hero-baseline,.hero .subtle-link{border-color:rgba(255,255,255,.5)}
+.hero .button,.hero .button:hover{background:#fff;color:#000;border-color:#fff}
+.hero :focus-visible{outline-color:#fff}
+@media(max-width:720px){.hero-scene::before{background:linear-gradient(180deg,rgba(255,255,255,.8),rgba(255,255,255,.5) 140px,rgba(0,0,0,.55) 230px,rgba(0,0,0,.55))}.hero-photo{object-position:48% 50%}}
