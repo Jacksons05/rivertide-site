@@ -226,3 +226,44 @@ main>.closing{display:block;padding:45px 0 70px}
  main>.origin{padding-top:28px;padding-bottom:0}
  main>.closing{padding:30px 0 45px}
 }
+
+/* Outcome-first marketing story with an authentic product walkthrough. */
+.hero-layout{grid-template-columns:minmax(0,1.75fr) minmax(280px,.8fr);align-items:end}
+.hero-layout h1{max-width:950px}
+.hero-side p{max-width:410px}
+.demo-heading{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:70px;align-items:end;margin:34px 0 46px}
+.demo-heading h2{font-size:clamp(44px,5vw,78px);line-height:1.08;max-width:800px}
+.demo-heading p{font-size:18px;line-height:1.65;max-width:470px}
+.demo-reel{margin:0;background:#0e1114;border:1px solid #111;padding:18px 18px 0}
+.demo-reel video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#f4f4f4}
+.demo-reel figcaption{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:17px 2px;color:#fff;font-size:13px}
+.demo-reel figcaption a{display:inline-flex;gap:12px;border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:3px;white-space:nowrap}
+.demo-outcomes{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #111}
+.demo-outcomes>div{min-height:138px;padding:24px 20px;border-right:1px solid #111;display:flex;flex-direction:column;justify-content:flex-end}
+.demo-outcomes>div:first-child{border-left:1px solid #111}
+.demo-outcomes small{font-size:12px;color:#444;margin-bottom:auto}
+.demo-outcomes strong{font-size:clamp(25px,2.5vw,40px);line-height:1.1;letter-spacing:-.04em;margin-top:18px}
+.demo-outcomes span{font-size:12px;color:#555;margin-top:7px}
+.product-example-marker{margin-top:96px}
+
+@media(max-width:900px){
+ .hero-layout,.demo-heading{grid-template-columns:1fr;gap:28px}
+ .hero-side p{max-width:620px}
+ .demo-heading{margin-bottom:32px}
+ .demo-heading p{max-width:620px}
+ .demo-outcomes{grid-template-columns:1fr 1fr}
+ .demo-outcomes>div:nth-child(3){border-left:1px solid #111}
+ .demo-outcomes>div:nth-child(-n+2){border-bottom:1px solid #111}
+}
+@media(max-width:720px){
+ .hero-layout h1{font-size:clamp(44px,12vw,68px)}
+ .demo-heading h2{font-size:clamp(36px,10vw,52px)}
+ .demo-heading p{font-size:16px}
+ .demo-reel{padding:7px 7px 0;margin-inline:-3%}
+ .demo-reel figcaption{font-size:11px;padding:13px 4px}
+ .demo-reel figcaption>span{max-width:56%}
+ .demo-outcomes{margin-inline:-3%}
+ .demo-outcomes>div{min-height:112px;padding:17px 14px}
+ .demo-outcomes small,.demo-outcomes span{font-size:11px}
+ .product-example-marker{margin-top:72px}
+}
