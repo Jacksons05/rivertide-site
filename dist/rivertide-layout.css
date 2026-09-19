@@ -33,3 +33,27 @@ dialog{background:var(--paper);border-color:var(--line)}dialog>button{display:in
 @media(max-width:1000px){.product,.markets,.thinking,.origin{padding:32px}.market-pair article{grid-template-columns:1fr}.market-photo{height:190px}.origin-label{padding-right:24px}}
 @media(max-width:720px){html{scroll-padding-top:148px}.masthead nav a{justify-content:center;padding:0 6px}.hero-scene{padding-top:32px}.hero-image{border-radius:8px 8px 0 0}.section-marker{width:auto;justify-content:space-between}.product,.markets,.thinking,.origin{width:calc(100% - 24px);padding:24px 18px;border-radius:14px}main>.product,main>.markets,main>.thinking,main>.origin,main>.closing{margin-top:28px}.scenario{margin-top:28px;padding:34px 0}.market-pair article{padding:14px;grid-template-columns:120px minmax(0,1fr)}.market-photo{height:200px}.principle-grid{grid-template-columns:1fr}.principle-grid article{min-height:0}.principle-grid article>.mono{margin-bottom:18px}.origin{grid-template-columns:1fr;gap:20px}.origin-label{padding:0 0 18px;border-right:0;border-bottom:1px solid #c9bba3}.closing{width:calc(100% - 24px);padding:28px 22px}.closing h2{font-size:28px}footer.contain{margin-top:28px}}
 @media(max-width:420px){.masthead nav{font-size:13px}.masthead nav a{padding:0 3px}.section-marker .sample{display:none}.market-pair article{grid-template-columns:1fr}.market-photo{height:170px;margin-bottom:14px}}
+
+/* Harbor Night — low-glare system shared with the product. */
+:root{--ink:#e8f1ee;--muted:#a9bbb7;--line:#315055;--canvas:#0b1517;--paper:#132326;--surface:#1a3034;--accent:#79b7c0;--deep:#091214;--sand:#29302b;background:var(--canvas);color:var(--ink);color-scheme:dark}
+html,body{background:var(--canvas)}
+.logo-frame{width:206px;padding:8px 11px;background:#f2ede3;border:1px solid #cfc6b5;border-radius:8px;aspect-ratio:auto}.logo-frame img{width:100%}
+.product-name .logo-frame{width:154px;padding:6px 9px}.footer-main .logo-frame{width:180px}
+.masthead{background:rgba(11,21,23,.94);border-color:var(--line)}.masthead:before{background:rgba(11,21,23,.94);border-color:var(--line)}
+.masthead nav a:hover,.footer-main nav a:hover{background:rgba(121,183,192,.12)}
+.button{background:var(--accent);border-color:var(--accent);color:#081315}.button:hover{background:#91c6cd}.button.compact{color:#081315}
+.subtle-link:hover{border-color:var(--accent)}
+.hero-scene{background:radial-gradient(circle at 72% 18%,rgba(55,105,112,.28),transparent 36%),linear-gradient(180deg,#0d191b 0%,#101f22 100%);border-color:var(--line)}
+.forecast-preview{background:linear-gradient(145deg,#17292c,#111f22);border-color:#3c6066;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.product{background:#101e21;box-shadow:0 28px 80px rgba(0,0,0,.2)}
+.demo-reel{background:#0a1315;border-color:var(--line)}.demo-reel video{object-fit:contain;background:#071012}.demo-outcomes{background:#15272a}
+.product-frame{background:#111f22;border-color:var(--line)}.product-mast,.product-disclosure{background:#1a3034}.product-nav{background:#0f1d20}.screens{background:#111f22}.stats button{background:#15272a}.stats .spend-stat{background:#1d3539}.stats button:hover{border-color:var(--accent)}.product-nav button[aria-current]{background:var(--accent);color:#081315}
+.input-shell{background:#0d1a1c}.chart-legend i{border-color:var(--accent)}.chart-legend i.buffer-line,.chart-legend i.scenario-line{border-color:#d2b58a}
+.markets{background:#101f22}.markets .section-marker{background:rgba(121,183,192,.09)}.market-pair article{background:#17292c;border-color:#315055}.market-photo{filter:saturate(.86) brightness(.82)}
+.scenario{background:#071113}.scenario-copy .button,.closing .button{background:#dce9e5;border-color:#dce9e5;color:#091416}.scenario-sheet{background:#15272a;color:var(--ink);border-color:#46696e;box-shadow:0 24px 70px rgba(0,0,0,.32)}
+.thinking{background:#101e21}.principle-grid article{background:#17292c;border-color:#315055}.origin{background:#1d2926;border-color:#4b5b54}.origin-label{border-color:#4b5b54}.founder-principle{border-color:#d2b58a}
+.closing{background:linear-gradient(120deg,#17343a,#112429);color:var(--ink);border:1px solid #315055}
+dialog{background:#17292c;color:var(--ink)}dialog::backdrop{background:rgba(2,7,8,.76)}
+.section-marker{background:rgba(121,183,192,.08);border-color:rgba(121,183,192,.3);color:#9ecbd1}.section-marker .sample{border-color:rgba(121,183,192,.3)}
+.hero-image,.market-photo{box-shadow:0 18px 50px rgba(0,0,0,.2)}
+@media(max-width:720px){.masthead .logo-frame{width:164px;padding:7px 9px}.product-name .logo-frame{width:132px}.footer-main .logo-frame{width:176px}}
