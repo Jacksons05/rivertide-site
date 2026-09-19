@@ -35,6 +35,7 @@ let vanApplied=false;
 byId('van-toggle').addEventListener('click',()=>{vanApplied=!vanApplied;byId('van-toggle').setAttribute('aria-pressed',String(vanApplied));byId('van-toggle').innerHTML=vanApplied?'Show before purchase <span>↶</span>':'See the van’s impact <span>↗</span>';byId('van-low').textContent=usd(vanApplied?evaluatePurchase(model.van).low:baselineLow);byId('van-status').textContent=vanApplied?'After the October purchase · below your buffer':'Before the purchase';document.querySelector('.scenario-sheet').classList.toggle('applied',vanApplied);});
 chart('main-chart');chart('hero-chart');updatePurchase();
 if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion');const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:.08});document.querySelectorAll('.reveal').forEach(section=>observer.observe(section));}
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(video=>video.pause());}
 
 byId('screen-upcoming').querySelector('.ledger').innerHTML=profile.upcoming.map(item=>`<div><span>${item.label}<small style="display:block">${item.dueDate}</small></span><strong>${usd(item.amount)}</strong></div>`).join('');
 byId('saving-amount').dispatchEvent(new Event('input'));
