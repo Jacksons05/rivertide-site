@@ -1,5 +1,11 @@
-/* A quieter marketing layer: one visual idea per section. */
-:root{--quiet-line:rgba(121,183,192,.27)}
+/* Graphite and Ice: neutral, low-glare, and deliberately restrained. */
+:root{--ink:#f2f3f1;--muted:#a7adae;--line:#30373a;--canvas:#111416;--paper:#1a1e21;--surface:#1a1e21;--accent:#91bec8;--deep:#0d1012;--sand:#1a1e21;--action:#c8e1e5;--quiet-line:rgba(145,190,200,.22);background:var(--canvas);color:var(--ink);color-scheme:dark}
+html,body{background:var(--canvas)}
+.masthead,.masthead:before{background:rgba(17,20,22,.96);border-color:var(--line)}
+.masthead nav a:hover,.footer-main nav a:hover{background:rgba(145,190,200,.1)}
+.button,.button.compact{background:var(--action);border-color:var(--action);color:var(--canvas)}
+.button:hover{background:#d5e9ec;color:var(--canvas)}
+.logo-frame{background:#e7e8e4;border-color:#bfc4c1}
 .hero-scene{padding:72px 0 0;background:var(--canvas);border-bottom:0}
 .hero-layout{grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:96px;align-items:end}
 .hero-message{max-width:620px}
@@ -18,7 +24,7 @@
 .calm-section{padding-top:88px!important;padding-bottom:88px!important;margin-top:0!important;border:0!important;border-top:1px solid var(--quiet-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
 .section-marker,.markets .section-marker{width:auto;max-width:none;padding:0;margin-bottom:28px;border:0;border-radius:0;background:transparent;color:var(--accent);font-weight:600}
 .demo-heading,.split-heading{gap:96px;margin-bottom:40px}
-.demo-reel{max-width:980px;margin-inline:auto;padding:0;border:0;border-radius:8px;background:#071012;box-shadow:none}
+.demo-reel{max-width:980px;margin-inline:auto;padding:0;border:0;border-radius:8px;background:var(--deep);box-shadow:none}
 .demo-reel video{border-radius:8px}
 .demo-reel figcaption{padding:18px 0 0}
 .example-story{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:980px;margin:56px auto 0;padding-top:32px;border-top:1px solid var(--quiet-line)}
@@ -28,7 +34,7 @@
 .markets{padding-inline:0}
 .market-pair{gap:64px}
 .market-pair article{display:grid;grid-template-columns:160px minmax(0,1fr);gap:24px;padding:0;border:0;border-radius:0;background:transparent}
-.market-photo{grid-row:auto;height:190px;margin:0;border-radius:8px;box-shadow:none}
+.market-photo{grid-row:auto;height:190px;margin:0;border-radius:8px;box-shadow:none;filter:saturate(.72) brightness(.84)}
 .market-pair h3{margin:4px 0 12px}
 .season-line{display:flex;gap:24px;margin-top:20px;color:var(--ink)}
 .season-line span+span{padding-left:24px;border-left:1px solid var(--quiet-line)}
