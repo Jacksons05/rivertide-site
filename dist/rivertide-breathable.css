@@ -1,0 +1,52 @@
+/* A quieter marketing layer: one visual idea per section. */
+:root{--quiet-line:rgba(121,183,192,.27)}
+.hero-scene{padding:72px 0 0;background:var(--canvas);border-bottom:0}
+.hero-layout{grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:96px;align-items:end}
+.hero-message{max-width:620px}
+.hero-message>p{max-width:520px;margin-top:24px}
+.hero-actions{margin-top:32px}
+.forecast-facts{margin:0;padding:0}
+.forecast-facts>div{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:24px;padding:18px 0;border-top:1px solid var(--quiet-line)}
+.forecast-facts>div:last-child{border-bottom:1px solid var(--quiet-line)}
+.forecast-facts dt{color:var(--muted)}
+.forecast-facts dd{margin:0;text-align:right;font-weight:600}
+.forecast-facts dd span{color:var(--muted);font-weight:400}
+.hero-image{height:360px;margin-top:64px;border-radius:0;overflow:visible;box-shadow:none}
+.hero-photo{height:320px;border-radius:8px;filter:saturate(.82) brightness(.88)}
+.hero-image figcaption{padding-top:14px;color:var(--muted)}
+
+.calm-section{padding-top:88px!important;padding-bottom:88px!important;margin-top:0!important;border:0!important;border-top:1px solid var(--quiet-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+.section-marker,.markets .section-marker{width:auto;max-width:none;padding:0;margin-bottom:28px;border:0;border-radius:0;background:transparent;color:var(--accent);font-weight:600}
+.demo-heading,.split-heading{gap:96px;margin-bottom:40px}
+.demo-reel{max-width:980px;margin-inline:auto;padding:0;border:0;border-radius:8px;background:#071012;box-shadow:none}
+.demo-reel video{border-radius:8px}
+.demo-reel figcaption{padding:18px 0 0}
+.example-story{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:980px;margin:56px auto 0;padding-top:32px;border-top:1px solid var(--quiet-line)}
+.example-story p{max-width:46ch}
+.example-story strong{color:var(--ink)}
+
+.markets{padding-inline:0}
+.market-pair{gap:64px}
+.market-pair article{display:grid;grid-template-columns:160px minmax(0,1fr);gap:24px;padding:0;border:0;border-radius:0;background:transparent}
+.market-photo{grid-row:auto;height:190px;margin:0;border-radius:8px;box-shadow:none}
+.market-pair h3{margin:4px 0 12px}
+.season-line{display:flex;gap:24px;margin-top:20px;color:var(--ink)}
+.season-line span+span{padding-left:24px;border-left:1px solid var(--quiet-line)}
+
+.origin{grid-template-columns:minmax(160px,1fr) minmax(0,2fr);gap:72px}
+.origin-label{padding:0;border:0}
+.origin>div:last-child{max-width:650px}
+.thinking{padding-inline:0}
+.principle-grid{gap:32px}
+.principle-grid article{min-height:0;padding:20px 0 0;border:0;border-top:1px solid var(--quiet-line);border-radius:0;background:transparent}
+.principle-grid h3{margin-bottom:10px}
+.closing{display:flex;width:min(1160px,calc(100% - 64px));align-items:center;justify-content:space-between;gap:48px;color:var(--ink)}
+.closing h2{margin-top:10px}
+footer.contain{margin-top:0}
+
+.about-page .section-marker{padding:0;background:transparent}
+.about-page .about-next{padding:36px 0;border:0;border-top:1px solid var(--quiet-line);border-radius:0;background:transparent}
+
+@media(max-width:900px){.hero-layout{gap:48px}.demo-heading,.split-heading{gap:48px}.market-pair{gap:36px}.market-pair article{grid-template-columns:1fr}.market-photo{height:220px}.origin{gap:48px}}
+@media(max-width:720px){.hero-scene{padding-top:44px}.hero-layout{grid-template-columns:1fr;gap:40px}.hero-message>p{margin-top:20px}.hero-actions{margin-top:24px}.hero-image{height:auto;margin-top:44px}.hero-photo{height:210px}.calm-section{width:calc(100% - 32px)!important;padding:56px 0!important}.demo-heading,.split-heading{grid-template-columns:1fr;gap:14px;margin-bottom:28px}.example-story{grid-template-columns:1fr;gap:20px;margin-top:40px;padding-top:24px}.market-pair{grid-template-columns:1fr;gap:44px}.market-pair article{grid-template-columns:130px minmax(0,1fr);gap:18px}.market-photo{height:180px}.origin{grid-template-columns:1fr;gap:24px}.principle-grid{grid-template-columns:1fr;gap:28px}.closing{width:calc(100% - 32px);align-items:flex-start}.about-page .about-next{width:calc(100% - 32px)}}
+@media(max-width:460px){.market-pair article{grid-template-columns:1fr}.market-photo{height:180px}.season-line{gap:14px}.season-line span+span{padding-left:14px}.closing{flex-direction:column}}
