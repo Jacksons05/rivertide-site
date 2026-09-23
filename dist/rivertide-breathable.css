@@ -1,11 +1,11 @@
-/* Graphite and Ice: neutral, low-glare, and deliberately restrained. */
-:root{--ink:#f2f3f1;--muted:#a7adae;--line:#30373a;--canvas:#111416;--paper:#1a1e21;--surface:#1a1e21;--accent:#91bec8;--deep:#0d1012;--sand:#1a1e21;--action:#c8e1e5;--quiet-line:rgba(145,190,200,.22);background:var(--canvas);color:var(--ink);color-scheme:dark}
+/* Deep Forest and Limestone: grounded, regional, and quietly premium. */
+:root{--ink:#f2f0e9;--muted:#b1b5ac;--line:#354239;--canvas:#101713;--paper:#19221d;--surface:#19221d;--accent:#bfa675;--deep:#0c110e;--sand:#19221d;--action:#d8c49b;--quiet-line:rgba(191,166,117,.24);background:var(--canvas);color:var(--ink);color-scheme:dark}
 html,body{background:var(--canvas)}
-.masthead,.masthead:before{background:rgba(17,20,22,.96);border-color:var(--line)}
-.masthead nav a:hover,.footer-main nav a:hover{background:rgba(145,190,200,.1)}
+.masthead,.masthead:before{background:rgba(16,23,19,.96);border-color:var(--line)}
+.masthead nav a:hover,.footer-main nav a:hover{background:rgba(191,166,117,.1)}
 .button,.button.compact{background:var(--action);border-color:var(--action);color:var(--canvas)}
-.button:hover{background:#d5e9ec;color:var(--canvas)}
-.logo-frame{background:#e7e8e4;border-color:#bfc4c1}
+.button:hover{background:#e2d0aa;color:var(--canvas)}
+.logo-frame{background:#e8e3d6;border-color:#c8bfaf}
 .hero-scene{padding:72px 0 0;background:var(--canvas);border-bottom:0}
 .hero-layout{grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:96px;align-items:end}
 .hero-message{max-width:620px}
