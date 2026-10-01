@@ -1,9 +1,11 @@
 # Rivertide shared logo
 
-September 10, 2026: user explicitly requested a thinner two-wave icon aligned to the serif wordmark, and identical artwork on both properties. This supersedes the earlier requirement to keep the wave shape unchanged.
+October 1, 2026: the owner approved Figma concept 02, Signature R, and authorized replacing the logo on both the marketing website and app. This supersedes the September 10 wave/serif identity.
 
-Use rivertide-logo-refined.svg on both properties. It preserves the original black River / muted-blue tide wordmark and combines it with the refined tapered wave. The file contains its own assets and transparent rendering filter. Keep the collapse toggle outside the logo link. Do not add a tilde or alternate text wordmark.
+Source: https://www.figma.com/design/83dEYwdeMsEM0ac2czm0BT?node-id=2-34
 
-Marketing asset: dist/assets/rivertide-logo-refined.svg. App asset: public/rivertide-logo-refined.svg. Both files must be byte-identical.
+Use rivertide-logo-signature.svg on Graphite surfaces. It is the exact Figma export with outlined Public Sans lettering and the custom R, off-white (#E9EEEC), on transparency. No light backing, filters, gradients, or wave illustration. Preserve its 282 × 90 aspect ratio and internal clear space.
 
-SHA-256: 9f121394ac2cd82ad8ee3ec8beb48f8f5c74e39bc1a6f6b241c0130d2772caff
+Use rivertide-logo-signature-dark.svg on light surfaces (Figma node 2:40). Use rivertide-signature-r.svg for the compact browser mark (node 2:35). Do not substitute the different monogram from concept 03.
+
+Each corresponding asset in marketing dist/assets/ and app public/ must remain byte-identical. Keep the sidebar toggle outside the logo link. Legacy refined assets are retained only for archival references, not live page logos.

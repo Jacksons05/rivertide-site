@@ -5,7 +5,8 @@ html,body{background:var(--canvas)}
 .masthead nav a:hover,.footer-main nav a:hover{background:rgba(145,190,200,.1)}
 .button,.button.compact{background:var(--action);border-color:var(--action);color:var(--canvas)}
 .button:hover{background:#d5e9ec;color:var(--canvas)}
-.logo-frame{background:#e7e8e4;border-color:#bfc4c1}
+.logo-frame{background:transparent;border:0;border-radius:0;padding:0;aspect-ratio:282/90}
+.masthead .logo-frame,.footer-main .logo-frame,.product-name .logo-frame{padding:0}
 .hero-scene{padding:0;background:var(--canvas);border-bottom:0}
 .hero-content{padding-top:72px}
 .hero-layout{grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:96px;align-items:end}
