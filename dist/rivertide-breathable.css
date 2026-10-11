@@ -1,5 +1,5 @@
 /* Graphite and Ice: neutral, low-glare, and deliberately restrained. */
-:root{--ink:#f2f3f1;--muted:#a7adae;--line:#30373a;--canvas:#111416;--paper:#1a1e21;--surface:#1a1e21;--accent:#91bec8;--deep:#0d1012;--sand:#1a1e21;--action:#c8e1e5;--quiet-line:rgba(145,190,200,.22);background:var(--canvas);color:var(--ink);color-scheme:dark}
+:root{--ink:var(--rt-text);--muted:var(--rt-muted);--line:var(--rt-border);--canvas:var(--rt-canvas);--paper:var(--rt-surface);--surface:var(--rt-surface);--accent:var(--rt-accent);--deep:#0d1012;--sand:#1a1e21;--action:var(--rt-action);--quiet-line:rgba(145,190,200,.22);background:var(--canvas);color:var(--ink);color-scheme:dark}
 html,body{background:var(--canvas)}
 .masthead,.masthead:before{background:rgba(17,20,22,.96);border-color:var(--line)}
 .masthead nav a:hover,.footer-main nav a:hover{background:rgba(145,190,200,.1)}
