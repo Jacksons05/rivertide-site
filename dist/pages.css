@@ -23,7 +23,7 @@
 .about-intro{padding:16px 0 32px}
 .founder-grid{display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);gap:48px;align-items:start}
 .founder-portrait{margin:0}
-.founder-portrait img{display:block;width:100%;height:auto;border-radius:var(--rt-panel-radius)}
+.founder-portrait img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%}
 .founder-portrait figcaption{color:var(--rt-muted);margin-top:12px}
 .about-lead{max-width:700px}
 .about-lead h1{margin-bottom:20px;max-width:650px}
@@ -31,6 +31,11 @@
 .about-copy p+p,.about-lead p+p{margin-top:16px}
 .about-page footer.contain{margin-top:16px}
 .footer-main{padding-top:24px;padding-bottom:24px}
+.focused-page .market-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.focused-page .market-pair article{grid-template-columns:minmax(0,1fr);gap:20px}
+.focused-page .market-photo{width:100%;height:auto;aspect-ratio:8/5;grid-row:auto;overflow:hidden}
+.focused-page .market-photo img{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:720px){.focused-page .market-pair{grid-template-columns:minmax(0,1fr);gap:32px}}
 @media(max-width:720px){.masthead{position:relative}.masthead nav{display:grid;grid-template-columns:1fr 1fr;gap:0!important}.masthead nav a{justify-content:flex-start}.masthead .compact span{display:none}body.rt-design .masthead .compact{padding:12px 10px}}
 @media(max-width:900px){.masthead{flex-wrap:wrap;gap:16px}.masthead nav{order:3;flex-basis:100%;justify-content:flex-start}.founder-grid{gap:28px}}
 @media(max-width:720px){.page-paths,.business-types{grid-template-columns:1fr;gap:24px}.founder-grid{grid-template-columns:1fr}.founder-portrait{max-width:280px}.hero-principle{gap:16px;margin-top:28px}.page-note{flex-direction:column;align-items:flex-start}.focused-page .calm-section{padding:28px 0!important}.business-intro{padding:28px 0}.masthead nav,.footer-main nav{gap:16px}.about-intro{padding-top:12px}}
