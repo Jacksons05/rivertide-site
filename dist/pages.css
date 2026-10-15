@@ -1,0 +1,36 @@
+/* Page structure only. Colors and typography come from the shared design system. */
+.masthead nav,.footer-main nav{flex-wrap:wrap;gap:20px}
+.masthead nav a[aria-current=page],.footer-main nav a[aria-current=page]{color:var(--rt-accent);text-decoration:underline;text-underline-offset:6px}
+.hero-content{padding-top:40px}
+.hero-principle{margin-top:40px;padding:28px 0;gap:32px}
+.page-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:24px 0 40px}
+.page-paths>a{display:grid;gap:12px;border-top:1px solid var(--rt-border);padding-top:20px;text-decoration:none;color:var(--rt-text)}
+.page-paths>a:hover h2{text-decoration:underline;text-underline-offset:5px}
+.page-paths p{color:var(--rt-muted)}
+.focused-page .calm-section{padding-top:36px!important;padding-bottom:36px!important}
+.focused-page .section-marker{margin-bottom:16px}
+.focused-page .demo-heading,.focused-page .split-heading{margin-bottom:24px;gap:32px}
+.focused-page .demo-reel{max-width:850px}
+.focused-page .example-story{margin-top:24px;padding-top:20px;gap:32px}
+.page-note{display:flex;align-items:center;gap:32px;padding:24px 0;border-top:1px solid var(--rt-border)}
+.page-note p{flex:1;color:var(--rt-muted)}
+.business-intro{padding:36px 0}
+.business-intro>p{margin-top:16px}
+.business-types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:32px}
+.business-types article{padding-top:20px;border-top:1px solid var(--rt-border)}
+.business-types h2{margin-bottom:16px}
+.about-main{padding-top:20px}
+.about-intro{padding:16px 0 32px}
+.founder-grid{display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);gap:48px;align-items:start}
+.founder-portrait{margin:0}
+.founder-portrait img{display:block;width:100%;height:auto;border-radius:var(--rt-panel-radius)}
+.founder-portrait figcaption{color:var(--rt-muted);margin-top:12px}
+.about-lead{max-width:700px}
+.about-lead h1{margin-bottom:20px;max-width:650px}
+.about-rationale{padding:32px 0;gap:32px}
+.about-copy p+p,.about-lead p+p{margin-top:16px}
+.about-page footer.contain{margin-top:16px}
+.footer-main{padding-top:24px;padding-bottom:24px}
+@media(max-width:720px){.masthead{position:relative}.masthead nav{display:grid;grid-template-columns:1fr 1fr;gap:0!important}.masthead nav a{justify-content:flex-start}.masthead .compact span{display:none}body.rt-design .masthead .compact{padding:12px 10px}}
+@media(max-width:900px){.masthead{flex-wrap:wrap;gap:16px}.masthead nav{order:3;flex-basis:100%;justify-content:flex-start}.founder-grid{gap:28px}}
+@media(max-width:720px){.page-paths,.business-types{grid-template-columns:1fr;gap:24px}.founder-grid{grid-template-columns:1fr}.founder-portrait{max-width:280px}.hero-principle{gap:16px;margin-top:28px}.page-note{flex-direction:column;align-items:flex-start}.focused-page .calm-section{padding:28px 0!important}.business-intro{padding:28px 0}.masthead nav,.footer-main nav{gap:16px}.about-intro{padding-top:12px}}
