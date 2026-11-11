@@ -20,7 +20,7 @@ for(const width of [1280,390]){
   await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,route+' overflow '+width);
   assert.equal(await page.locator('img').evaluateAll(imgs=>imgs.every(i=>i.complete&&i.naturalWidth>0)),true);
-  if(route==='who-its-for.html')assert.match(page.url(),/index.html#seasons$/);
+  if(route==='who-its-for.html')assert.match(page.url(),/\/#seasons$/);
   await page.screenshot({path:out+route.replace('.html','')+'-'+width+'.png',fullPage:true});
   if(route==='index.html'){
    assert.equal(await page.locator('#spend').innerText(),'$500');
