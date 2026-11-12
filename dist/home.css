@@ -1,4 +1,11 @@
 /* Homepage-only layout; shared app tokens remain unchanged. */
+/* Preserve the supplied photo; monochrome presentation is applied in CSS. */
+body.tide-home{background:#090909;isolation:isolate;position:relative}
+.tide-home::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.78)),url('assets/tide-shoreline.png') center 48%/cover no-repeat;filter:grayscale(1)}
+.tide-home .decision-demo{background:#181818;border-color:#3a3a3a}
+.tide-home .masthead,.tide-home main>section{border-color:rgba(255,255,255,.18)}
+@media(max-width:540px){.tide-home::before{background-position:center,58% center}}
+@media(forced-colors:active){.tide-home::before{display:none}}
 body.rt-design .decision-demo h2,body.rt-design .home-support h2{font-size:16px!important;line-height:1.5;letter-spacing:0}
 .home-refresh .demo-hero{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.25fr);gap:48px;align-items:start;padding:40px 0}
 .hero-intro{padding-top:28px}.hero-intro .eyebrow{color:var(--rt-accent);margin-bottom:24px}.hero-intro h1{max-width:14ch}.hero-intro>p{max-width:35ch}.hero-intro .hero-note{margin:16px 0 0}
