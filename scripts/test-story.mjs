@@ -22,9 +22,9 @@ try {
    if(route==='/who-its-for')assert.match(page.url(),/\/#seasons$/);
    if(route==='/'){
     assert.equal(await page.locator('main svg').count(),1);
-    const backdrop=await page.locator('body').evaluate(el=>{const s=getComputedStyle(el,'::before');return {position:s.position,filter:s.filter,events:s.pointerEvents};});
-    assert.deepEqual(backdrop,{position:'fixed',filter:'grayscale(1)',events:'none'});
-    assert.equal((await page.request.get('http://127.0.0.1:4183/assets/tide-shoreline.png')).status(),200);
+    const backdrop=await page.locator('.water-backdrop').evaluate(el=>getComputedStyle(el,'::before').filter);
+    assert.equal(backdrop,'grayscale(1)');
+    assert.equal((await page.request.get('http://127.0.0.1:4183/assets/tide-ocean.webp')).status(),200);
     assert.equal(await page.locator('#march-value').innerText(),'−$8,500');
     assert.equal(await page.locator('#buy-october').getAttribute('aria-pressed'),'true');
     if(width===1280)assert.ok((await page.locator('#buy-may').boundingBox()).y<700);

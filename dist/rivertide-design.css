@@ -1,7 +1,7 @@
 /* Rivertide shared design v1. Keep byte-identical across app and marketing. */
 :root {
-  --rt-canvas:#111416; --rt-surface:#1a1e21; --rt-raised:#202529;
-  --rt-text:#f2f3f1; --rt-muted:#a7adae; --rt-border:#30373a;
+  --rt-canvas:#101214; --rt-surface:#191d20; --rt-raised:#202529;
+  --rt-text:#f2f3f1; --rt-muted:#adb5b8; --rt-border:#343c40;
   --rt-accent:#91bec8; --rt-action:#c8e1e5; --rt-action-hover:#d5e9ec;
   --rt-danger:#ef998d; --rt-control-radius:8px; --rt-panel-radius:12px;
   --rt-font:'Public Sans',sans-serif; --rt-reading:16px; --rt-heading:32px;

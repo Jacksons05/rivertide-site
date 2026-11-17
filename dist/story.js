@@ -20,17 +20,21 @@ function update(){
  const result=purchaseScenario(profile,profile.demoAsOf,amount,selected);
  const isMay=selected==='2027-05-15';
  document.querySelectorAll('[data-date]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.date===selected)));
- set('march-value',money(march(result.after)));
- set('scenario-status',isMay?'Buying in May keeps March above the cushion.':'Buying in October leaves March below zero.');
+ set('march-value',money(result.after.projectedLow.amount));set('low-month',new Date(result.after.projectedLow.month+'-15T12:00:00').toLocaleDateString('en-US',{month:'long'}));
+ set('scenario-status',isMay?'Above your $6,000 cushion at each month end':'Below your $6,000 cushion');
  set('explanation',isMay?'Moving the purchase to May avoids taking $15,000 out before the quiet months. It still reduces cash from May onward.':'The purchase reduces cash by $15,000 from October onward. The lowest projected balance is '+money(result.shortfall)+' below the chosen cushion.');
- const width=Math.max(250,svg.clientWidth),height=230;
- const x=i=>20+i*(width-40)/11,y=n=>20+(max-n)/(max-min)*165;
+ const width=Math.max(250,svg.clientWidth),height=260,left=60,right=16,top=24,bottom=38;
+ const lo=Math.floor(min/20000)*20000,hi=Math.ceil(max/20000)*20000;
+ const x=i=>left+i*(width-left-right)/11,y=n=>top+(hi-n)/(hi-lo)*(height-top-bottom);
  const points=values=>values.map((n,i)=>x(i)+','+y(n)).join(' ');
  svg.setAttribute('viewBox','0 0 '+width+' '+height);
- svg.innerHTML='<title>September 2026 to August 2027 cash forecast</title><line x1="20" x2="'+(width-20)+'" y1="'+y(buffer)+'" y2="'+y(buffer)+'" stroke="#a7adae" stroke-dasharray="2 5"/><polyline fill="none" stroke="#f2f3f1" stroke-width="3" points="'+points(base.points.map(p=>p.projectedCash))+'"/><polyline fill="none" stroke="#91bec8" stroke-width="3" stroke-dasharray="8 5" points="'+points(result.after.points.map(p=>p.projectedCash))+'"/>'+[0,3,6,11].map(i=>'<text x="'+x(i)+'" y="220" text-anchor="middle">'+base.points[i].label.split(' ')[0]+'</text>').join('')+'<circle cx="'+x(6)+'" cy="'+y(march(result.after))+'" r="5" fill="#f2f3f1"/>';
+ const ticks=Array.from({length:(hi-lo)/20000+1},(_,i)=>lo+i*20000);
+ svg.innerHTML='<title>September 2026 to August 2027 cash forecast</title>'+ticks.map(n=>'<text x="'+(left-10)+'" y="'+(y(n)+5)+'" text-anchor="end">'+(n<0?'−':'')+'$'+Math.abs(n/1000)+'k</text>').join('')+'<line x1="'+left+'" x2="'+(width-right)+'" y1="'+y(buffer)+'" y2="'+y(buffer)+'" stroke="#a7adae" stroke-dasharray="2 5"/><polyline fill="none" stroke="#f2f3f1" stroke-width="3" points="'+points(base.points.map(p=>p.projectedCash))+'"/><polyline class="scenario-line" fill="none" stroke="#91bec8" stroke-width="3" stroke-dasharray="8 5" points="'+points(result.after.points.map(p=>p.projectedCash))+'"/>'+[0,3,6,11].map(i=>'<text x="'+x(i)+'" y="250" text-anchor="middle">'+base.points[i].label.split(' ')[0]+'</text>').join('')+'<circle cx="'+x(6)+'" cy="'+y(march(result.after))+'" r="5" fill="#c8e1e5"/>';
+ document.getElementById('monthly-values').innerHTML=base.points.map((p,i)=>'<tr><th scope="row">'+p.label+'</th><td>'+money(p.projectedCash)+'</td><td>'+money(result.after.points[i].projectedCash)+'</td></tr>').join('');
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)svg.querySelector('.scenario-line').animate([{opacity:.25},{opacity:1}],{duration:300});
  svg.setAttribute('aria-label','Monthly projected cash, September 2026 to August 2027. Purchase in '+(isMay?'May':'October')+'. March before purchase: '+money(march(base))+'. March with purchase: '+money(march(result.after))+'. Minimum cushion: '+money(buffer)+'.');
 }
-document.querySelectorAll('[data-date]').forEach(button=>button.addEventListener('click',()=>{selected=button.dataset.date;update();}));
-document.getElementById('try-example').addEventListener('click',()=>document.getElementById('buy-may').focus({preventScroll:true}));
+document.querySelectorAll('[data-date]').forEach(button=>{button.disabled=false;button.addEventListener('click',()=>{selected=button.dataset.date;update();});});
+
 window.addEventListener('resize',update);
 update();
