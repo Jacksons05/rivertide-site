@@ -1,6 +1,6 @@
 {
   "cleanUrls": true,
-  "outputDirectory": "dist",
-  "buildCommand": "",
+  "outputDirectory": ".vercel-site",
+  "buildCommand": "node scripts/build-vercel.mjs",
   "installCommand": ""
 }
