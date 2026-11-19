@@ -6,7 +6,7 @@ const set=(id,value)=>document.getElementById(id).textContent=value;
 const buffer=base.breakdown.buffer,svg=document.getElementById('purchase-chart'),input=document.getElementById('purchase-amount');
 let selected='2026-10-15';
 set('cash',money(base.breakdown.cash));set('spend',money(base.availableToSpend));
-const labels={cash:'Cash on September 7, 2026',obligations:'Bills due within 90 days',buffer:'Minimum cushion',seasonalReserve:'Held for months when costs exceed income',snapshot:'Left after these amounts',forecastHeadroom:'Room above the cushion at the lowest month'};
+const labels={obligations:'Bills due within 90 days',buffer:'Minimum cushion',seasonalReserve:'Held for months when costs exceed income',snapshot:'Left after these amounts',forecastHeadroom:'Room above the cushion at the lowest month'};
 document.getElementById('math').innerHTML=Object.entries(labels).map(([key,label])=>'<div><dt>'+label+'</dt><dd>'+money(base.breakdown[key])+'</dd></div>').join('');
 set('spending-bridge',`Rivertide uses the lower of two checks: cash left after bills and reserves (${money(base.breakdown.snapshot)}), and March's room above your cushion (${money(base.breakdown.forecastHeadroom)}).`);
 function update(){
@@ -24,7 +24,7 @@ function update(){
  set('explanation',`The ${money(amount)} purchase reduces cash from ${month(selected.slice(0,7))} onward. These are month-end estimates, not a guarantee.`);
  set('oct-copy',`October purchase: ${money(oct.after.projectedLow.amount)} low in ${month(oct.after.projectedLow.month)}.`);
  set('may-copy',`May purchase: ${money(may.after.projectedLow.amount)} low in ${month(may.after.projectedLow.month)}.`);
- const width=Math.max(250,svg.clientWidth),height=230,left=58,right=20,top=28,bottom=32;
+ const width=Math.max(250,svg.clientWidth),height=window.matchMedia('(max-width:760px)').matches?230:300,left=58,right=20,top=28,bottom=32;
  const min=Math.min(0,...result.after.points.map(p=>p.projectedCash)),max=Math.max(buffer,...base.points.map(p=>p.projectedCash));
  const step=Math.max(20000,Math.ceil((max-min)/4/20000)*20000),lo=Math.floor(min/step)*step,hi=Math.ceil(max/step)*step;
  const x=i=>left+i*(width-left-right)/11,y=n=>top+(hi-n)/(hi-lo)*(height-top-bottom),points=r=>r.points.map((p,i)=>x(i)+','+y(p.projectedCash)).join(' ');
