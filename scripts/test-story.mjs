@@ -46,6 +46,11 @@ try {
     await page.locator('#example summary').click();
     assert.equal(await page.locator('#spend').innerText(),'$500');
     assert.equal(await page.locator('#cash').innerText(),'$52,400');
+    const sizes=await page.locator('body *').evaluateAll(els=>[...new Set(els.filter(e=>e.getClientRects().length).map(e=>getComputedStyle(e).fontSize))].sort());
+    assert.deepEqual(sizes,width>760?['16px','40px']:['16px','32px']);
+    assert.equal((await page.locator('.demo-details').innerText()).match(/\$52,400/g).length,1);
+    if(width===1440){assert.ok((await page.locator('#buy-october').boundingBox()).width>=180);assert.equal((await page.locator('#purchase-chart').boundingBox()).height,300);}
+
     assert.match(await page.locator('#oct-copy').innerText(),/−\$8,500/);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'expanded overflow');
     await page.locator('#example summary').click();
