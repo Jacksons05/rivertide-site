@@ -12,8 +12,8 @@ const out=new URL('../../outputs/home-refresh/',import.meta.url).pathname;
 await mkdir(out,{recursive:true});
 const browser=await chromium.launch({headless:true,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE});
 try {
- for(const width of [1280,390,320]){
-  const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'});
+ for(const width of [1440,390,320]){
+  const page=await browser.newPage({viewport:{width,height:width===390?844:900},reducedMotion:'reduce'});
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   for(const route of ['/','/how-it-works','/why','/who-its-for']){
    await page.goto('http://127.0.0.1:4183'+route);await page.waitForLoadState('networkidle');await page.evaluate(()=>document.fonts.ready);
@@ -27,7 +27,7 @@ try {
     assert.equal((await page.request.get('http://127.0.0.1:4183/assets/tide-ocean.webp')).status(),200);
     assert.equal(await page.locator('#march-value').innerText(),'−$8,500');
     assert.equal(await page.locator('#buy-october').getAttribute('aria-pressed'),'true');
-    if(width===1280)assert.ok((await page.locator('#buy-may').boundingBox()).y<700);
+    if(width===1440)assert.ok((await page.locator('#buy-may').boundingBox()).y<700);
     await page.screenshot({path:out+'home-'+width+'.png',fullPage:true});
     await page.locator('#buy-may').focus();await page.keyboard.press('Enter');
     assert.equal(await page.locator('#march-value').innerText(),'$6,500');
