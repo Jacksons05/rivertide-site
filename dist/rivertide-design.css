@@ -1,9 +1,11 @@
-/* Rivertide shared design v1. Keep byte-identical across app and marketing. */
+/* Rivertide shared design v2: approved monochrome standard. Keep byte-identical across app and marketing. */
+/* Match the approved black-and-white preview, including legacy chart colors and imagery. */
+html { filter:grayscale(1); }
 :root {
-  --rt-canvas:#101214; --rt-surface:#191d20; --rt-raised:#202529;
-  --rt-text:#f2f3f1; --rt-muted:#adb5b8; --rt-border:#343c40;
-  --rt-accent:#91bec8; --rt-action:#c8e1e5; --rt-action-hover:#d5e9ec;
-  --rt-danger:#ef998d; --rt-control-radius:8px; --rt-panel-radius:12px;
+  --rt-canvas:#121212; --rt-surface:#1c1c1c; --rt-raised:#242424;
+  --rt-text:#f3f3f3; --rt-muted:#b4b4b4; --rt-border:#3b3b3b;
+  --rt-accent:#b5b5b5; --rt-action:#dcdcdc; --rt-action-hover:#e5e5e5;
+  --rt-danger:#aaaaaa; --rt-control-radius:8px; --rt-panel-radius:12px;
   --rt-font:'Public Sans',sans-serif; --rt-reading:16px; --rt-heading:32px;
   --rt-control-height:48px; --rt-panel-padding:24px; --rt-gap:24px;
   --rt-content-width:1160px; --rt-logo-width:188px;
