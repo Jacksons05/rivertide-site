@@ -22,7 +22,6 @@ function update(){
  set('purchase-low',`With: ${money(result.after.projectedLow.amount)} in ${month(result.after.projectedLow.month)}`);
  set('october-low',`${money(oct.after.projectedLow.amount)} · ${month(oct.after.projectedLow.month)}`);set('may-low',`${money(may.after.projectedLow.amount)} · ${month(may.after.projectedLow.month)}`);
  set('explanation',`The ${money(amount)} purchase reduces cash from ${month(selected.slice(0,7))} onward. These are month-end estimates, not a guarantee.`);
- set('base-copy',`Without purchase: ${money(base.projectedLow.amount)} low in ${month(base.projectedLow.month)}.`);
  set('oct-copy',`October purchase: ${money(oct.after.projectedLow.amount)} low in ${month(oct.after.projectedLow.month)}.`);
  set('may-copy',`May purchase: ${money(may.after.projectedLow.amount)} low in ${month(may.after.projectedLow.month)}.`);
  const width=Math.max(250,svg.clientWidth),height=230,left=58,right=20,top=28,bottom=32;
