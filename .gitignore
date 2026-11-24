@@ -1,2 +1,5 @@
 .vercel/
 .vercel-site/
+
+/playwright-report/
+/test-results/
