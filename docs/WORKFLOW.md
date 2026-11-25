@@ -1,5 +1,16 @@
 # Agent workflow
 
+## Code-first review loop (November 25, 2026)
+1. Inspect local rules/status and narrow source files. Edit code directly; do not use browser as a code editor.
+2. Run targeted checks during edits. Run full verification once before handoff: from app, `npm run verify -- --paired`.
+3. If macOS sandbox blocks Chromium, use `npm run verify -- --paired --no-browser`. This is PARTIAL verification, not a browser pass or release approval. CI runs all app browser flows; paired marketing checks still require both repos locally.
+4. Inspect changed desktop/mobile screens and controls once after checks. Keep browser hidden during testing; open final review link for owner. Avoid repeated screenshots of unchanged states.
+5. When push/PR creation is authorized, use GitHub feature branch and existing Vercel Git integration. Do not add a second CLI deployment pipeline. Record preview URL, exact commit, CI result, and outstanding checks together.
+6. Owner reviews preview; production merge/deploy requires explicit approval. Never infer deployed commit from a green build.
+
+App `npm run verify -- --plan` lists checks without executing them. `outputs/verify/summary.json` records latest run only; full logs stay local/ignored. No-browser mode never satisfies browser acceptance. CI must test latest pushed commit; local uncommitted changes are not covered.
+
+
 1. Read AGENTS.md and STATUS.md; inspect git status, branch and relevant remote PR state. Preserve uncommitted work. Never assume old PRs remain open.
 2. Read only task-relevant specifications and source. Identify outcome, files and acceptance checks. Honor task-specific scope/approval requirements without inventing new ones.
 3. Make small coherent changes. Prefer existing checkout; use a focused branch when needed. Avoid dependencies, refactors or framework migrations unrelated to the task.

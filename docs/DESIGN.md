@@ -1,5 +1,7 @@
 # Design contract
 
+Follow the approved [consumer UI standard](UI-STANDARD.md) for visual decisions, accessibility targets and comprehension testing. Existing screens must be evaluated against it; approval of the standard is not proof of conformance.
+
 Owner approved monochrome on November 19, 2026. Read [palette](../brand/PALETTE.md) and [approved logo](../brand/APPROVED-LOGO.md). Palette approval supersedes older Graphite and Ice guidance; approved logo artwork remains unchanged.
 
 - Black/charcoal surfaces, white text, gray secondary text and light-gray selected controls.

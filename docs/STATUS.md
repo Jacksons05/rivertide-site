@@ -1,5 +1,11 @@
 # Current status — website
 
+## November 25 workflow update (local, not published)
+Code-first review loop documented in WORKFLOW.md. App verification now supports command planning, explicit browser deferral, bounded steps and machine-readable summaries. Generated browser artifacts are excluded from lint. App CI filter removed so new app browser flows are included after push.
+Verification: runner help/plan/unknown-option behavior and lint passed; paired run passed lint (four existing warnings), 44 regressions, types and shared assets. Final Next build stalled in compilation and was interrupted; no full verification claim. Browser execution remains deferred locally due to macOS sandbox restriction. CI changes are not active remotely until committed/pushed. No production changes.
+
+## Earlier baseline
+
 Checked November 24, 2026. Refresh git/PR/deployment facts before releasing; this file is not a deployment monitor.
 
 - Review branch: `chore/monochrome-workflow`.

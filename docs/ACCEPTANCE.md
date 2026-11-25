@@ -19,4 +19,6 @@ Marketing currently retains its earlier $0–$1 billion input range. This is a k
 Use cushion and Estimated spending room; date sample cash explicitly. Label month-end projections and limitations. Preserve keyboard access, visible focus, chart descriptions and accessible exact-value tables. Keep personal browser storage isolated from resettable demo data.
 
 ## Definition of done
+
+UI work also follows [consumer UI standard](UI-STANDARD.md). Report internal checks separately from owner comprehension evidence; untested accessibility criteria remain outstanding, not passed.
 Scope addressed; relevant tests pass; UI inspected when changed; no unexpected asset/math changes; PR/preview/commit identified; limitations documented. Passing CI does not prove visual correctness. Preview ready, merged main and verified production are distinct states.

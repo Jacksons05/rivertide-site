@@ -12,6 +12,7 @@ Out of scope:
 - Observable behavior:
 - Required invariant:
 - Relevant viewport/accessibility case:
+- Customer task and comprehension risk (UI work):
 
 ## Verification
 Commands or browser checks:
@@ -21,6 +22,7 @@ Evidence paths / preview URL:
 Commit / PR:
 Checks actually run and results:
 Known limitations:
+Owner comprehension testing: evidence / not yet tested / not applicable:
 Production authorization / status:
 Next action:
 
