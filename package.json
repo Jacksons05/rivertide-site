@@ -1,0 +1,14 @@
+{
+  "name": "rivertide-marketing-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-vercel.mjs",
+    "test": "playwright test",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.1",
+    "@playwright/test": "1.65.1"
+  }
+}
