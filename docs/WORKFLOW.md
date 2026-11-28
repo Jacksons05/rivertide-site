@@ -1,5 +1,10 @@
 # Agent workflow
 
+## Independent browser quality checks
+See [BROWSER-QUALITY](BROWSER-QUALITY.md) for independent marketing CI, axe scans,
+review artifacts and the owner-approved screenshot-baseline process. This supersedes
+older notes below saying marketing checks require both repositories.
+
 ## Code-first review loop (November 25, 2026)
 1. Inspect local rules/status and narrow source files. Edit code directly; do not use browser as a code editor.
 2. Run targeted checks during edits. Run full verification once before handoff: from app, `npm run verify -- --paired`.

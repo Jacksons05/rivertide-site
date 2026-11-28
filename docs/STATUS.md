@@ -1,5 +1,13 @@
 # Current status — website
 
+## November 28 — independent quality checks
+- Added locked development-only Playwright/axe dependencies, independent CI and screenshot review artifacts. No sibling app checkout required.
+- Fixed keyboard access to the expanded month-end table.
+- Eight desktop/mobile browser tests pass locally, including axe scans of home, How it works, Why Rivertide, expanded explanation and invalid amount.
+- Screenshot candidates are not approved baselines. Manual access/device checks remain open.
+- App now uses approved owner journey for / and /demo; website demo links reach that route when app revision is released.
+- Pending GitHub/Vercel verification belongs to this feature branch, not a production claim.
+
 ## November 25 workflow update (local, not published)
 Code-first review loop documented in WORKFLOW.md. App verification now supports command planning, explicit browser deferral, bounded steps and machine-readable summaries. Generated browser artifacts are excluded from lint. App CI filter removed so new app browser flows are included after push.
 Verification: runner help/plan/unknown-option behavior and lint passed; paired run passed lint (four existing warnings), 44 regressions, types and shared assets. Final Next build stalled in compilation and was interrupted; no full verification claim. Browser execution remains deferred locally due to macOS sandbox restriction. CI changes are not active remotely until committed/pushed. No production changes.
